@@ -47,7 +47,7 @@ def selectWord(img):
                 gray = cv2.cvtColor(roi, cv2.COLOR_BGR2GRAY) # ================ tesseract 인식위한 이미지 흑백 전처리
                 blurred = cv2.GaussianBlur(gray, (3,3), 0) # ================ tesseract 인식위한 이미지 블러 처리
                 
-                ''' 테서렉트 ocr 사용
+                ''' 테서렉트 ocr 사용 (주석 제거하고 실행하면 됩니다)
                 text = pytesseract.image_to_string(blurred, config=custom_config)  # --psm 6은 sparse text를 의미
               
                 if not text:
